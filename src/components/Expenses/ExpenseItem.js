@@ -1,5 +1,5 @@
 // NOTE it is standard to save the css file name next to the comp and import the entire file as seen below
-import Card from "../Card.js";
+import Card from "../UI/Card.js";
 import ExpenseDate from "./ExpenseDate.js";
 import "./ExpenseItem.css";
 
