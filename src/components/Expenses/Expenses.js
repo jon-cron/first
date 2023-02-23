@@ -7,6 +7,7 @@ const Expenses = (props) => {
       {/* NOTE mapping over the array of expenses to render an ExpenseItem comp for each expense */}
       {props.items.map((expense) => (
         <ExpenseItem
+          key={expense.id}
           title={expense.title}
           amount={expense.amount}
           date={expense.date}
