@@ -1,5 +1,6 @@
 import "./App.css";
 import Expenses from "./components/Expenses/Expenses.js";
+import NewExpense from "./components/NewExpense/NewExpense.js";
 // NOTE upon starting the app open the terminal and run npm install
 
 const App = () => {
@@ -26,6 +27,7 @@ const App = () => {
   ];
   return (
     <div className="App">
+      <NewExpense />
       <Expenses items={expenses} />
     </div>
   );
