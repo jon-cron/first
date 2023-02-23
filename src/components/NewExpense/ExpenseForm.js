@@ -44,22 +44,40 @@ const ExpenseForm = () => {
     //   return { ...prevState, newDate: event.target.value };
     // });
   };
-  const submitNewExpense = () => {
-    console.log(title, amount, date);
+  const submitNewExpense = (event) => {
+    event.preventDefault();
+    const expenseData = {
+      title,
+      amount,
+      date: new Date(date),
+    };
+    console.log(expenseData);
+    setTitle("");
+    setAmount("");
+    setDate("");
   };
   return (
     <form className="new-expense__controls" onSubmit={submitNewExpense}>
       <div className="new-expense__control">
         <label>Title</label>
-        <input type="text" onChange={changeTitle} />
+        <input required type="text" value={title} onChange={changeTitle} />
       </div>
       <div className="new-expense__control">
         <label>Amount</label>
-        <input type="number" onChange={changeAmount} />
+        <input
+          required
+          type="number"
+          value={amount}
+          min="0.01"
+          step="0.01"
+          onChange={changeAmount}
+        />
       </div>
       <div className="new-expense__control">
         <label>Date</label>
         <input
+          required
+          value={date}
           type="date"
           min="2023-01-01"
           max="2024-12-31"
