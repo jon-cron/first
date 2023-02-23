@@ -1,7 +1,8 @@
 import "./App.css";
 import Expenses from "./components/Expenses/Expenses.js";
 // NOTE upon starting the app open the terminal and run npm install
-function App() {
+
+const App = () => {
   const expenses = [
     {
       id: "e1",
@@ -28,6 +29,6 @@ function App() {
       <Expenses items={expenses} />
     </div>
   );
-}
+};
 
 export default App;

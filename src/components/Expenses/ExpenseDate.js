@@ -1,7 +1,7 @@
 import Card from "../UI/Card.js";
 import "./ExpenseDate.css";
 
-function ExpenseDate(props) {
+const ExpenseDate = (props) => {
   const month = props.date.toLocaleString("en-US", { month: "long" });
   const day = props.date.toLocaleString("en-US", { month: "2-digit" });
   const year = props.date.getFullYear();
@@ -13,6 +13,6 @@ function ExpenseDate(props) {
       <div className="expense-date__day">{day}</div>
     </Card>
   );
-}
+};
 
 export default ExpenseDate;
